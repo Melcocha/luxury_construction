@@ -15,15 +15,10 @@ function BeforeAfter() {
     setSliderPos((x / rect.width) * 100);
   }, []);
 
-  const handleMouseDown = () => { isDragging.current = true; };
+  const handleMouseDown = (e) => { e.preventDefault(); isDragging.current = true; };
   const handleMouseUp = () => { isDragging.current = false; };
-  const handleMouseMove = (e) => {
-    if (isDragging.current) updateSlider(e.clientX);
-  };
-
-  const handleTouchMove = (e) => {
-    updateSlider(e.touches[0].clientX);
-  };
+  const handleMouseMove = (e) => { if (isDragging.current) updateSlider(e.clientX); };
+  const handleTouchMove = (e) => { e.preventDefault(); updateSlider(e.touches[0].clientX); };
 
   return (
     <section className="ba-section">
@@ -36,13 +31,18 @@ function BeforeAfter() {
           onMouseLeave={handleMouseUp}
           onTouchMove={handleTouchMove}
         >
+          {/* After (always full width behind) */}
           <img src={AFTER_IMG} alt="After renovation" className="ba-img ba-after" />
-          <div
-            className="ba-before-clip"
-            style={{ width: `${sliderPos}%` }}
-          >
-            <img src={BEFORE_IMG} alt="Before renovation" className="ba-img ba-before" />
-          </div>
+
+          {/* Before (clipped from the right via clip-path — fully responsive) */}
+          <img
+            src={BEFORE_IMG}
+            alt="Before renovation"
+            className="ba-img ba-before"
+            style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
+          />
+
+          {/* Divider handle */}
           <div
             className="ba-divider"
             style={{ left: `${sliderPos}%` }}
@@ -57,14 +57,14 @@ function BeforeAfter() {
         </div>
 
         <div className="ba-text">
-          <div className="ba-text-bubble"></div>
+          <div className="ba-text-bubble" />
           <h3>House Remodeling Transformation</h3>
           <p>
             Discover how we turn outdated spaces into{' '}
-            <a href="/contact">stunning modern homes</a>. Slide to see the transformation —
-            we manage everything{' '}
-            <a href="/contact">from concept to completion</a>, delivering results that
-            consistently exceed expectations.
+            <a href="/contact">stunning modern homes</a>. Slide to see the
+            transformation — we manage everything{' '}
+            <a href="/contact">from concept to completion</a>, delivering results
+            that consistently exceed expectations.
           </p>
         </div>
       </div>
