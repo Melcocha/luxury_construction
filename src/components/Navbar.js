@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { MdPhone, MdMenu, MdClose } from 'react-icons/md';
+import logoImg from '../images/logo/logoluxury-CxXvcWr3.png';
 import './Navbar.css';
 
 function Navbar() {
@@ -19,13 +20,8 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <div className={`nav-logo-circle ${scrolled ? 'nav-logo-visible' : 'nav-logo-hidden'}`}>
-          <div className="nav-logo-icon">🏗</div>
-          <div className="nav-logo-text">
-            <span>Luxury</span>
-            <span>Construction</span>
-            <span>Services</span>
-          </div>
+        <div className={`nav-logo-wrap ${scrolled ? 'nav-logo-visible' : 'nav-logo-hidden'}`}>
+          <img src={logoImg} alt="Luxury Construction Services" className="nav-logo-img" />
         </div>
 
         <div className="nav-links">
@@ -39,22 +35,18 @@ function Navbar() {
         </div>
 
         <div className="nav-actions">
-          <div className="nav-phone">
+          <a href="tel:+17034737795" className="nav-phone">
             <div className="nav-phone-circle">
               <MdPhone size={17} />
             </div>
             <span className="nav-phone-num">(703) 473-7795</span>
-          </div>
+          </a>
           <Link to="/contact" className="nav-quote-btn">
             Get A Quote <span className="nav-arrow">›</span>
           </Link>
         </div>
 
-        <button
-          className="hamburger"
-          onClick={() => setMenuOpen((o) => !o)}
-          aria-label="Toggle menu"
-        >
+        <button className="hamburger" onClick={() => setMenuOpen((o) => !o)} aria-label="Toggle menu">
           {menuOpen ? <MdClose size={26} /> : <MdMenu size={26} />}
         </button>
       </nav>

@@ -1,8 +1,7 @@
 import React, { useState, useRef, useCallback } from 'react';
+import beforeImg from '../images/slide/antes.jpg';
+import afterImg from '../images/slide/despues.jpg';
 import './BeforeAfter.css';
-
-const BEFORE_IMG = 'https://picsum.photos/seed/before-constr/600/500';
-const AFTER_IMG = 'https://picsum.photos/seed/after-marble/600/500';
 
 function BeforeAfter() {
   const [sliderPos, setSliderPos] = useState(50);
@@ -32,11 +31,11 @@ function BeforeAfter() {
           onTouchMove={handleTouchMove}
         >
           {/* After (always full width behind) */}
-          <img src={AFTER_IMG} alt="After renovation" className="ba-img ba-after" />
+          <img src={afterImg} alt="After renovation" className="ba-img ba-after" />
 
           {/* Before (clipped from the right via clip-path — fully responsive) */}
           <img
-            src={BEFORE_IMG}
+            src={beforeImg}
             alt="Before renovation"
             className="ba-img ba-before"
             style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}

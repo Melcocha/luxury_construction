@@ -1,25 +1,32 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MdArrowForwardIos, MdArrowBackIos } from 'react-icons/md';
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+import heroBg from '../images/video/Diseño sin título.mp4';
 import './Hero.css';
 
 const carouselImages = [
-  'https://picsum.photos/seed/luxreno-a/520/380',
-  'https://picsum.photos/seed/luxreno-b/520/380',
-  'https://picsum.photos/seed/luxreno-c/520/380',
-  'https://picsum.photos/seed/luxreno-d/520/380',
+  require('../images/bath/1-3jmRTu8u.jpg'),
+  require('../images/kitchen/15-Cka7-PMh.jpg'),
+  require('../images/room/17-DylWcybW.jpg'),
+  require('../images/living/28-BrRE1MBd.jpg'),
 ];
 
 function Hero() {
   const [current, setCurrent] = useState(0);
 
-  const prev = () =>
-    setCurrent((c) => (c - 1 + carouselImages.length) % carouselImages.length);
-  const next = () =>
-    setCurrent((c) => (c + 1) % carouselImages.length);
+  const prev = () => setCurrent((c) => (c - 1 + carouselImages.length) % carouselImages.length);
+  const next = () => setCurrent((c) => (c + 1) % carouselImages.length);
 
   return (
     <section className="hero">
+      <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        src={heroBg}
+      />
       <div className="hero-bg-overlay">
         <div className="hero-inner">
           <div className="hero-text-box">
@@ -35,7 +42,7 @@ function Hero() {
 
           <div className="hero-card">
             <button className="hero-arrow left-arrow" onClick={prev}>
-              <MdArrowBackIos size={14} />
+              <MdChevronLeft size={22} />
             </button>
             <img
               src={carouselImages[current]}
@@ -43,7 +50,7 @@ function Hero() {
               className="hero-card-img"
             />
             <button className="hero-arrow right-arrow" onClick={next}>
-              <MdArrowForwardIos size={14} />
+              <MdChevronRight size={22} />
             </button>
           </div>
         </div>

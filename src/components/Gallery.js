@@ -3,48 +3,48 @@ import { MdArrowBackIos, MdArrowForwardIos, MdClose } from 'react-icons/md';
 import './Gallery.css';
 
 const bathroomImages = [
-  'https://picsum.photos/seed/gb1/400/300',
-  'https://picsum.photos/seed/gb2/400/300',
-  'https://picsum.photos/seed/gb3/400/300',
-  'https://picsum.photos/seed/gb4/400/300',
-  'https://picsum.photos/seed/gb5/400/300',
-  'https://picsum.photos/seed/gb6/400/300',
-  'https://picsum.photos/seed/gb7/400/300',
-  'https://picsum.photos/seed/gb8/400/300',
-  'https://picsum.photos/seed/gb9/400/300',
-  'https://picsum.photos/seed/gb10/400/300',
-  'https://picsum.photos/seed/gb11/400/300',
-  'https://picsum.photos/seed/gb12/400/300',
+  require('../images/bath/1-3jmRTu8u.jpg'),
+  require('../images/bath/2-DdiNOdQQ.jpg'),
+  require('../images/bath/3-CmZMsOQf.jpg'),
+  require('../images/bath/4-DV639a8B.jpg'),
+  require('../images/bath/6-BFEn964b.jpg'),
+  require('../images/bath/7-CxDMUpTU.jpg'),
+  require('../images/bath/33-BQ0iy8kb.jpg'),
+  require('../images/bath/34-DbpWzMAw.jpg'),
+  require('../images/bath/35-C7oZmcmm.jpg'),
+  require('../images/bath/36-DL33an3e.jpg'),
+  require('../images/bath/37-Dn9Pkbzb.jpg'),
+  require('../images/bath/38-C5sQN8PR.jpg'),
 ];
 
 const kitchenImages = [
-  'https://picsum.photos/seed/gk1/400/300',
-  'https://picsum.photos/seed/gk2/400/300',
-  'https://picsum.photos/seed/gk3/400/300',
-  'https://picsum.photos/seed/gk4/400/300',
-  'https://picsum.photos/seed/gk5/400/300',
-  'https://picsum.photos/seed/gk6/400/300',
-  'https://picsum.photos/seed/gk7/400/300',
+  require('../images/kitchen/9-BuHPJG6X.jpg'),
+  require('../images/kitchen/10-BL5t2krP.jpg'),
+  require('../images/kitchen/11-zhPNYqTW.jpg'),
+  require('../images/kitchen/12-BOtBgiX_.jpg'),
+  require('../images/kitchen/13-BCZ7PydV.jpg'),
+  require('../images/kitchen/14-CCabXLgb.jpg'),
+  require('../images/kitchen/15-Cka7-PMh.jpg'),
 ];
 
 const roomImages = [
-  'https://picsum.photos/seed/gr1/400/300',
-  'https://picsum.photos/seed/gr2/400/300',
-  'https://picsum.photos/seed/gr3/400/300',
-  'https://picsum.photos/seed/gr4/400/300',
-  'https://picsum.photos/seed/gr5/400/300',
-  'https://picsum.photos/seed/gr6/400/300',
-  'https://picsum.photos/seed/gr7/400/300',
+  require('../images/room/17-DylWcybW.jpg'),
+  require('../images/room/18-Bg33VOuU.jpg'),
+  require('../images/room/19-CDhPWXkY.jpg'),
+  require('../images/room/20-BzU7N_dg.jpg'),
+  require('../images/room/21-CTXwb7Ys.jpg'),
+  require('../images/room/22-NddgqGsw.jpg'),
+  require('../images/room/23-CS-JpI3V.jpg'),
 ];
 
 const livingRoomImages = [
-  'https://picsum.photos/seed/gl1/400/300',
-  'https://picsum.photos/seed/gl2/400/300',
-  'https://picsum.photos/seed/gl3/400/300',
-  'https://picsum.photos/seed/gl4/400/300',
-  'https://picsum.photos/seed/gl5/400/300',
-  'https://picsum.photos/seed/gl6/400/300',
-  'https://picsum.photos/seed/gl7/400/300',
+  require('../images/living/22-NddgqGsw.jpg'),
+  require('../images/living/23-CS-JpI3V.jpg'),
+  require('../images/living/24-DQEobX-c.jpg'),
+  require('../images/living/25-C6-8WBJr.jpg'),
+  require('../images/living/26-CGp-szSJ.jpg'),
+  require('../images/living/27-DJawmCUE.jpg'),
+  require('../images/living/28-BrRE1MBd.jpg'),
 ];
 
 function Lightbox({ images, startIndex, onClose }) {
@@ -62,7 +62,7 @@ function Lightbox({ images, startIndex, onClose }) {
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowLeft') setIndex((i) => (i - 1 + images.length) % images.length);
+      if (e.key === 'ArrowLeft')  setIndex((i) => (i - 1 + images.length) % images.length);
       if (e.key === 'ArrowRight') setIndex((i) => (i + 1) % images.length);
     };
     window.addEventListener('keydown', onKey);
@@ -75,25 +75,15 @@ function Lightbox({ images, startIndex, onClose }) {
 
   return (
     <div className="lb-overlay" onClick={onClose}>
-      <button className="lb-close" onClick={onClose}>
-        <MdClose size={26} />
-      </button>
-
-      <button className="lb-arrow lb-prev" onClick={prev}>
-        <MdArrowBackIos size={22} />
-      </button>
-
+      <button className="lb-close" onClick={onClose}><MdClose size={26} /></button>
+      <button className="lb-arrow lb-prev" onClick={prev}><MdArrowBackIos size={20} /></button>
       <img
         className="lb-image"
         src={images[index]}
         alt={`Preview ${index + 1}`}
         onClick={(e) => e.stopPropagation()}
       />
-
-      <button className="lb-arrow lb-next" onClick={next}>
-        <MdArrowForwardIos size={22} />
-      </button>
-
+      <button className="lb-arrow lb-next" onClick={next}><MdArrowForwardIos size={20} /></button>
       <div className="lb-counter" onClick={(e) => e.stopPropagation()}>
         {index + 1} / {images.length}
       </div>
@@ -107,11 +97,7 @@ function GallerySection({ title, images, onOpen }) {
       <h2 className="gallery-section-title">{title}</h2>
       <div className="gallery-grid">
         {images.map((src, i) => (
-          <div
-            className="gallery-item"
-            key={i}
-            onClick={() => onOpen(images, i)}
-          >
+          <div className="gallery-item" key={i} onClick={() => onOpen(images, i)}>
             <img src={src} alt={`${title} project ${i + 1}`} loading="lazy" />
             <div className="gallery-item-overlay">
               <span className="gallery-zoom-icon">🔍</span>
@@ -125,11 +111,7 @@ function GallerySection({ title, images, onOpen }) {
 
 function Gallery() {
   const [lightbox, setLightbox] = useState(null);
-
-  const openLightbox = useCallback((images, index) => {
-    setLightbox({ images, index });
-  }, []);
-
+  const openLightbox  = useCallback((images, index) => setLightbox({ images, index }), []);
   const closeLightbox = useCallback(() => setLightbox(null), []);
 
   return (
@@ -140,13 +122,8 @@ function Gallery() {
         <GallerySection title="Room"       images={roomImages}       onOpen={openLightbox} />
         <GallerySection title="LivingRoom" images={livingRoomImages} onOpen={openLightbox} />
       </div>
-
       {lightbox && (
-        <Lightbox
-          images={lightbox.images}
-          startIndex={lightbox.index}
-          onClose={closeLightbox}
-        />
+        <Lightbox images={lightbox.images} startIndex={lightbox.index} onClose={closeLightbox} />
       )}
     </section>
   );

@@ -1,13 +1,22 @@
 .hero {
   width: 100%;
-  background-image: url('https://picsum.photos/seed/dark-construction-bg/1400/700');
-  background-size: cover;
-  background-position: center 30%;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Overlay is NOT position:absolute — it flows normally so it sets the hero height */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 .hero-bg-overlay {
-  background: rgba(10, 10, 20, 0.68);
+  position: relative;
+  z-index: 1;
+  background: rgba(10, 10, 20, 0.62);
   display: flex;
   align-items: center;
   padding: 60px;

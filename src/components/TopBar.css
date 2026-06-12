@@ -8,28 +8,11 @@
   min-height: 70px;
 }
 
-.tb-logo-circle {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: white;
-  border-radius: 50px;
-  padding: 4px 10px 4px 4px;
-  border: 2px solid #ddd;
-  flex-shrink: 0;
-}
-
-.tb-logo-icon { font-size: 26px; line-height: 1; }
-
-.tb-logo-text {
-  display: flex;
-  flex-direction: column;
-  font-size: 9px;
-  font-weight: 700;
-  line-height: 1.35;
-  color: #1a1a1a;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
+.tb-logo-img {
+  height: 58px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .topbar-promo {

@@ -1,19 +1,13 @@
 import React from 'react';
 import { MdLocationOn, MdAccessTime } from 'react-icons/md';
+import logoImg from '../images/logo/logoluxury-CxXvcWr3.png';
 import './TopBar.css';
 
 function TopBar() {
   return (
     <div className="topbar">
       <div className="topbar-logo">
-        <div className="tb-logo-circle">
-          <div className="tb-logo-icon">🏗</div>
-          <div className="tb-logo-text">
-            <span>Luxury</span>
-            <span>Construction</span>
-            <span>Services</span>
-          </div>
-        </div>
+        <img src={logoImg} alt="Luxury Construction Services" className="tb-logo-img" />
       </div>
       <div className="topbar-promo">
         Save an additional <strong>$200</strong> when you request a quote online

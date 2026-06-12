@@ -1,12 +1,7 @@
 import React from 'react';
 import { FaInstagram } from 'react-icons/fa';
-import {
-  MdEmail,
-  MdLocationOn,
-  MdPhone,
-  MdCalendarToday,
-  MdCheckBox,
-} from 'react-icons/md';
+import { MdEmail, MdLocationOn, MdPhone, MdCalendarToday, MdCheckBox } from 'react-icons/md';
+import logoImg from '../images/logo/logoluxury-CxXvcWr3.png';
 import './Footer.css';
 
 function Footer() {
@@ -14,14 +9,8 @@ function Footer() {
     <footer className="footer">
       <div className="footer-social">
         <p className="footer-follow">Follow Us</p>
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footer-instagram-btn"
-        >
-          <FaInstagram size={16} />
-          Instagram
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer-instagram-btn">
+          <FaInstagram size={16} /> Instagram
         </a>
       </div>
 
@@ -29,14 +18,7 @@ function Footer() {
 
       <div className="footer-main">
         <div className="footer-brand">
-          <div className="footer-logo">
-            <div className="footer-logo-icon">🏗</div>
-            <div className="footer-logo-text">
-              <span>Luxury</span>
-              <span>Construction</span>
-              <span>Services</span>
-            </div>
-          </div>
+          <img src={logoImg} alt="Luxury Construction Services" className="footer-logo-img" />
           <p className="footer-tagline">Your trusted partner for home improvement services.</p>
         </div>
 
@@ -44,15 +26,26 @@ function Footer() {
           <h4>Get In Touch</h4>
           <div className="footer-contact-item">
             <MdEmail size={16} />
-            <span>Luxuryconstructionservicesllc@outlook.com</span>
+            <a href="mailto:Luxuryconstructionservicesllc@outlook.com" className="footer-link">
+              Luxuryconstructionservicesllc@outlook.com
+            </a>
           </div>
           <div className="footer-contact-item">
             <MdLocationOn size={16} />
-            <span>209 Willow terrace Sterling ,Va 20164</span>
+            <a
+              href="https://maps.google.com/?q=209+Willow+terrace+Sterling+Va+20164"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              209 Willow terrace Sterling, Va 20164
+            </a>
           </div>
           <div className="footer-contact-item">
             <MdPhone size={16} />
-            <span>(703) 473-7795</span>
+            <a href="tel:+17034737795" className="footer-link">
+              (703) 473-7795
+            </a>
           </div>
           <div className="footer-contact-item">
             <MdCalendarToday size={16} />
@@ -62,22 +55,10 @@ function Footer() {
 
         <div className="footer-why">
           <h4>Why Choose Us?</h4>
-          <div className="footer-why-item">
-            <MdCheckBox size={18} color="#4CAF50" />
-            <span>Licensed &amp; Insured</span>
-          </div>
-          <div className="footer-why-item">
-            <MdCheckBox size={18} color="#4CAF50" />
-            <span>Reliable &amp; Timely Service</span>
-          </div>
-          <div className="footer-why-item">
-            <MdCheckBox size={18} color="#4CAF50" />
-            <span>Competitive Pricing</span>
-          </div>
-          <div className="footer-why-item">
-            <MdCheckBox size={18} color="#4CAF50" />
-            <span>Quality Work Guaranteed</span>
-          </div>
+          <div className="footer-why-item"><MdCheckBox size={18} color="#4CAF50" /><span>Licensed &amp; Insured</span></div>
+          <div className="footer-why-item"><MdCheckBox size={18} color="#4CAF50" /><span>Reliable &amp; Timely Service</span></div>
+          <div className="footer-why-item"><MdCheckBox size={18} color="#4CAF50" /><span>Competitive Pricing</span></div>
+          <div className="footer-why-item"><MdCheckBox size={18} color="#4CAF50" /><span>Quality Work Guaranteed</span></div>
         </div>
       </div>
 
