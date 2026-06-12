@@ -9,7 +9,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-social">
         <p className="footer-follow">Follow Us</p>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer-instagram-btn">
+        <a href="https://www.instagram.com/luxuryconstructionservicesllc/" target="_blank" rel="noopener noreferrer" className="footer-instagram-btn">
           <FaInstagram size={16} /> Instagram
         </a>
       </div>
