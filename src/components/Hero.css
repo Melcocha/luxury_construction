@@ -1,0 +1,125 @@
+.hero {
+  width: 100%;
+  min-height: 520px;
+  background-image: url('https://picsum.photos/seed/dark-construction-bg/1400/700');
+  background-size: cover;
+  background-position: center 30%;
+  position: relative;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 20, 0.68);
+  display: flex;
+  align-items: center;
+  padding: 60px 60px;
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text-box {
+  max-width: 480px;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 44px 40px;
+  border-radius: 14px;
+}
+
+.hero-text-box h1 {
+  font-size: 46px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.hero-text-box p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 15px;
+  margin-bottom: 32px;
+  line-height: 1.65;
+}
+
+.hero-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.hero-cta-btn:hover {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.hero-cta-btn span {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+/* Floating carousel card */
+.hero-card {
+  position: relative;
+  width: 500px;
+  height: 370px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 5px solid #ffffff;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
+  flex-shrink: 0;
+}
+
+.hero-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.92);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  color: #333;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.hero-arrow:hover {
+  background: #ffffff;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}

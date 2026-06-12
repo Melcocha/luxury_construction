@@ -1,0 +1,117 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 36px;
+  background: #484848;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  min-height: 64px;
+}
+
+.nav-logo-circle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border-radius: 50px;
+  padding: 4px 10px 4px 4px;
+  cursor: pointer;
+}
+
+.nav-logo-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 32px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 15px;
+  padding: 6px 18px;
+  border-radius: 24px;
+  border: 2px solid transparent;
+  transition: border-color 0.15s;
+  font-weight: 500;
+}
+
+.nav-link.nav-active {
+  border-color: white;
+}
+
+.nav-sep {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+}
+
+.nav-phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-phone-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #29B6F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.nav-phone-num {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-quote-btn {
+  background: #29B6F6;
+  color: white;
+  padding: 9px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.nav-quote-btn:hover {
+  background: #0288D1;
+}
+
+.nav-arrow {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+}
