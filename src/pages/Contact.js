@@ -33,7 +33,7 @@ function Contact() {
       <div className="contact-card">
         <h2 className="contact-title">Request a Home Renovation Quote</h2>
         <p className="contact-subtitle">
-          Fill out the form below to contact us and receive a free quote for your home renovation.
+          Fill out the form below to contact us and receive a free quote for your home renovatioon.
         </p>
 
         <form className="contact-form" onSubmit={handleSubmit}>
