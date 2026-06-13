@@ -19,8 +19,8 @@
   background: rgba(10, 10, 20, 0.62);
   display: flex;
   align-items: center;
-  padding: 60px;
-  min-height: 520px;
+  padding: 80px 60px;
+  min-height: 680px;
 }
 
 .hero-inner {
@@ -42,17 +42,17 @@
 }
 
 .hero-text-box h1 {
-  font-size: 46px;
+  font-size: 56px;
   font-weight: 900;
   color: #ffffff;
   line-height: 1.1;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .hero-text-box p {
   color: rgba(255, 255, 255, 0.88);
-  font-size: 15px;
-  margin-bottom: 32px;
+  font-size: 18px;
+  margin-bottom: 36px;
   line-height: 1.65;
 }
 
@@ -60,11 +60,11 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 13px 28px;
+  padding: 15px 32px;
   border: 2px solid #ffffff;
   background: transparent;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
   border-radius: 6px;
   cursor: pointer;
@@ -76,8 +76,8 @@
 
 .hero-card {
   position: relative;
-  width: 500px;
-  height: 370px;
+  width: 560px;
+  height: 420px;
   border-radius: 22px;
   overflow: hidden;
   border: 5px solid #ffffff;
@@ -117,15 +117,16 @@
 
 /* ── Tablet ── */
 @media (max-width: 1100px) {
-  .hero-card { width: 380px; height: 280px; }
-  .hero-text-box h1 { font-size: 38px; }
+  .hero-card { width: 420px; height: 310px; }
+  .hero-text-box h1 { font-size: 44px; }
 }
 
 @media (max-width: 900px) {
-  .hero-bg-overlay { padding: 40px 30px; }
-  .hero-card { width: 300px; height: 220px; }
+  .hero-bg-overlay { padding: 50px 30px; min-height: 560px; }
+  .hero-card { width: 320px; height: 240px; }
   .hero-text-box { padding: 28px 24px; max-width: 380px; }
-  .hero-text-box h1 { font-size: 30px; }
+  .hero-text-box h1 { font-size: 34px; }
+  .hero-text-box p { font-size: 16px; }
 }
 
 /* ── Mobile ── */
@@ -148,26 +149,26 @@
   }
 
   .hero-text-box h1 {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 14px;
   }
 
   .hero-text-box p {
-    font-size: 14px;
-    margin-bottom: 22px;
+    font-size: 15px;
+    margin-bottom: 24px;
   }
 
   .hero-card {
     width: 100%;
-    height: 210px;
+    height: 240px;
     border-radius: 14px;
     border-width: 3px;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-bg-overlay { padding: 24px 14px; }
-  .hero-text-box h1 { font-size: 24px; }
-  .hero-card { height: 170px; }
-  .hero-cta-btn { padding: 11px 22px; font-size: 14px; }
+  .hero-bg-overlay { padding: 28px 16px; }
+  .hero-text-box h1 { font-size: 26px; }
+  .hero-card { height: 200px; }
+  .hero-cta-btn { padding: 13px 24px; font-size: 15px; }
 }

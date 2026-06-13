@@ -67,8 +67,8 @@
 
 .nav-link {
   color: white;
-  font-size: 15px;
-  padding: 6px 18px;
+  font-size: 18px;
+  padding: 7px 20px;
   border-radius: 24px;
   border: 2px solid transparent;
   transition: border-color 0.15s;
@@ -104,15 +104,15 @@
   flex-shrink: 0;
 }
 
-.nav-phone-num { color: white; font-size: 15px; font-weight: 500; }
+.nav-phone-num { color: white; font-size: 17px; font-weight: 500; }
 
 .nav-quote-btn {
   background: #29B6F6;
   color: white;
-  padding: 9px 20px;
+  padding: 10px 22px;
   border-radius: 6px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 17px;
   display: flex;
   align-items: center;
   gap: 6px;
